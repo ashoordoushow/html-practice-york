@@ -31,7 +31,389 @@
   Web Browsers (Chrome, Firefox, etc.) turn html code/elements into a viewable website
   ^ there purpose is to read html documents and display them
   (skeleton - means the building blocks/code that's behind a webpage)
-     -->
+  The HTML element is everything from the start the tag, to the content in between, and to the end tag
+  All HTML documents consist of nested HTML elements. 
+  ^ NESTED ELEMENTS - are elements within elements. For Ex. below the the <h1> and <p> are nested within the body element, which in turn is nested into the <html> element.
+  A closer look - the <html> element DEFINES the HTML document
+  the <body> element DEFINES the document body
+  & then the <h1> defines the heading, and <p> defines the paragraph element
+  Some HTML elements do not have content/end tags - they're called empty elements Ex. <img>, <br>, <hr>, <input> tags do not need end tags. These are called VOID elements
+  HTML tags are not case sensitive (meaning you can you upper or lower case letters)
+  BUT it is recommended to always use lower case
+  To provide more information about HTML elements I need to get familiar with ATTRIBUTES
+  Attributes can provide MORE details about an element. 
+  They are ALWAYS SPECIFIED INSIDE the start tag of an element.
+  Ex. <a> </a> <- so for this element attribute 'href=' and the 'attributes value' wil be in the start tag like this vvv (^ attributes come in name / value pairs);
+  <a href= "https://www.w3schools.com"> This is the description / content </a>
+  Links are defined with the <a> tag, and URL's are specified in the href attribute
+  Another type of attribute is src= (also called source)
+  HTML images are defined with the <img> tag, and the img source or URL is defined by the src attribute.
+  Images in HTML have a 'set of size' attributes like width="", and height="" and the numbered values are referred to as pixels in size.
+  The style attribute - is used to specify the style/look of an element. Ex. <p style= "color:red"> This is the content </p> (This is called CSS) CSS - allows you to change colors, sizes (of text), and set the layout of your page (location of the element left, middle, to the right, etc.).
+  The language of the HTML document can be DECLARED with the lang= attribute in your <html> tag
+  Ex. <html lang= "fr"> </html> (French)
+  The title= attribute specifies the title for an element. Double quotes and/or single quotes are required to be used around the values of the attributes
+  In conclusion; if you want to change something about an element you would probably need to use an attribute.
+  Headings ARE A MUST to use in a sea of words. They make titles and subtitles stand out giving the users better experience reading and understanding the sea of words on a webpage.
+  There are 6 different headings levels. They range from <h1> - <h6>, and each on has a rank.
+  <h1> - is the largest and most important heading.
+  <h2> - is the second, and on and on till <h6> (which is the least important heading.)
+  Each HTML heading has a default size. You can change the size with the style attribute and the CSS font size property (value), and to change color - use the CSS color property (value).
+  Search Engines use the Headings index the structure and content of your Web Pages.
+  The browser automatically adds white space (margin) between each <p> element used.
+  In HTML you can output extra spaces in the browser by adding extra spaces or lines in your HTML code.
+  If you want a line break use the html <br> void element. - this breaks a line without starting an entirely new paragraph.
+  To add color and personality to an HTML page you need style (style= attribute)
+  The style attribute contains CSS properties and values. 
+  CSS is the language used to style HTML
+  The CSS "background-color:lightgreen" property sets the background color of an HTML element
+  The CSS "color:red" defines the text color of a HTML element
+  The CSS "font-family" property defines the font of the HTML element
+  The CSS "font-size:50x" property defines the font size of an HTML element
+  The CSS "text-align:center" property defines the horizontal text alignment for the HTML element.
+  HTML also has elements for defining text with a special meaning Ex. vvv
+  <b> - Bold text
+  <strong> - Important text
+  <i> - Italic text
+  <em> - Emphasized text
+  <mark> - Marked text (defines highlighted text)
+  <small> - Small text
+  <del> - Deleted text
+  <ins> - Inserted text
+  <sub> - Subscript text
+  <sup> - Superscript text
+  ^ They correspond with formatting output
+  <b></b> defines a bold text without any extra importance (makes text bold no matter what),
+  and you can use these elements by nesting them inside other elements.
+  <strong></stong> defines strong text; indicating important text; usually displayed as Bold in the Web Browser
+  <i> defines and italic text, and <em> defines emphasized text; usually italic text
+  HTML source code - the whole HTML code/document that is behind a web page.
+  HTML colors - can be specified using color names, RGB, or HEX values.
+  HTML supports 140 predefined color names.
+  To give your text a border, use the "border:2px solid green" property, and inside that same property you must type solid befor you pick a color so the border displays.
+  If you use RGB values or HEX values you have more than 16 million color possibilites
+  RGB - stands for red, green, and blue; each parameter of red, green, and blue defines the intesity of the color between 0 and 255. Ex. if you need a really red color you set the red parameter to 255, and the other to colors to 0, also for black all color parameters must be set to 0, for white all must be 255, by using different combinations of red, green, and blue you have over 16 millions color possibilities.
+  HEX values (Hexadecimal) - the hex syntax starts with a hashtag #000000 followed by 6 values
+  ^ these values represent red, green, and blue just like the RGB values.
+  But HEX numbers go from 00 - FF.
+  To get red you set the highest value to FF and other two numbers to lowest value 00 Ex.
+  #ff0000 ( this is how it's broken down #ff 00 00) other colors (#f9332b, #77bf4e, etc.)
+  There is also an extension of RGB color values with an alpha channel which ranges between 0.0 (fully transparent) and 1.0 (not transparent at all)
+  CSS (cascading style sheets) - describes how HTML elements are displayed on a web page
+  This has the ability to save many hours, because it controls the layout of multiple web pages ALL AT ONCE.
+  There are 3 ways to add CSS to HTML elements.
+  1) Inline - which is done by using the style= attribute in HTML elements (start tag)
+  2) Interanl - which is completed by using a style element in the head section Ex.
+ <head>
+    <style> 
+      body {background-color: powderblue;} <- describes the body style
+      p    {color:red;}                    <- describes the paragraph style
+    </style>
+  </head>
+  3) External - which means using an external CSS file Ex. referencing style.css file
+  <head>
+    <link rel="stylesheet" href="style.css"> (link void element, and rel=, and href= attribute)
+  </head> 
+  
+  Inline CSS - is used to apply a unique style to a single HTML element
+  
+  Internal CSS - is used to define a style for a single HTML PAGE - defined in the <head> section of an HTML page within the <style> element
+  
+  External CSS - used to define the style for many HTML pages. With this you can change the look of an entire website by changing only one file. To use this option, add a link to it in the <head> section of the HTML page. The file referenced MUST NOT contain any HTML code; the file is written in all CSS syntax, and saved with a .css extension.
+  
+  Links - found in nearly all web pages; they allow users to click their way from page to page.
+  All HTML links are hyperlinks. (clickable links that jump you to another document)
+  A link can be anything - an image, button, text, a cartoon character, anything.
+  All links are defined with the <a></a> tag and href= attribute is the roadmap specifying the destination of the address link. the link text is the visible part on the web browser that you can click.
+
+  Local Links - a link to the same website, and is specified with a relative URL (means there's no "www" part)
+  The target= attribute specifies where to open the linked document. Ex. 
+  <a href="https://www.w3schools.com/html" target=" "> W3Schools </a> The values can be: _blank - opens the linked document in a new window or tab,
+  _self - opens the same document in the same window/tab as it was clicked (usually default),
+  _parent - opens the linked document in the parent frame,
+   _top - opens the linked document in the full body of the window
+  my_iframe - opens linked document in a named frame Ex.
+  <p><a href="https://www.w3schools.com/" target="my_iframe">Visit W3Schools!</a></p>
+  
+  <iframe src="demo_iframe.htm" width="100%" name="my_iframe"></iframe>
+
+  ^^ this opens a link in a small little screen(frame) on the the same web page
+  You can use <a></a> element to show images on your web browser. To do this you wrap an <img> element inside an <a> element Ex.
+  <a href="default.asp">
+    <img src="smiley.gif">
+  </a>
+  
+  You can add a title= attribute to a link, which specifies extra information about an element. Which is most often shown as a tool tip text when the mouse hovers over the element link on the web browser.
+
+  Images - can improve the design and appearance of your web page. 
+  Images are defined with the <img> tag. Which doesn't have a closing tag, it uses an empty tag '>'.
+  Images should contain src="" attribute which specifies the URL or source of the image, and the alt="" attribute, which provides an alternative text for an image, which is helpful if the user cannot view the image because of slow connection  
+  The value of the alt="" attribute should describe the image - so if the browser cannot show the image it'll show the value of the image instead
+  alt="" image is required in HTML, a web page will not validate correctly without it
+
+  Image Sizes - when you start to deal with the images width and height, you use the style="" attribute with a value of "width:500px; height:600px;"> OR you can use the width="2334" and the height="232" attributes (style="" attribtue recommended)
+
+  For src="" & finding the specific location of the image - if not specified the browser expects to find the image in the same folder as the web page, BUT it's common to store images in subfolders - to do this you must include the folder name in the src attribute.
+  Another way to store images is on image servers - you can access images from any web address in the world
+
+  You can also use animated images. HTML allows animated gifs.
+  If you want to use an image as a link put the <img> tag inside the <a> tag. Ex.
+    <a href="default.asp">
+      <img src="img_ball.jpg" alt="Basketball" style="width:034px; height;123px">
+  </a>
+
+  To make an image float to the right or the left of a text, use the CSS styl="float;right" property like this.
+
+  CSS style="background-image:url('example.jpg');"> property to add a background image
+  IF you only want the background image on the paragraph only specify the background-image property on the <p>
+
+  Loading images can take time, and large images can slow down your page, so use them carefully.
+
+  Tables in HTML - arranges their data into rows and columns
+  You will use the HTML <table> element to define a table
+  If you want to define table rows use <tr> elements for each row
+  Each row consists of 1 or more <td> elements (table data) which act as columns inside the table and define data for each table cell.
+  You can also add headings for each column by using the <th> element.
+  SO A LOT OF NESTING ELEMENTS FOR CREATING TABLES IN HTML! Ex.
+
+  <table>
+    <tr>
+      <th>labels</th>
+      <th>labels</th>
+      <th>labels</th>
+    </tr>
+    <tr>
+      <th>labels</th>
+      <th>labels</th>
+      <th>labels</th>
+    </tr>
+    <tr>
+      <th>labels</th>
+      <th>labels</th>
+      <th>labels</th>
+    </tr>
+  </table>
+  
+  Internal CSS ^ is best used to style a table
+  The CSS border: 1px solid black; property defines a border - this will display a table with double borders, if you want single borders include the CSS property border: collapse;
+  If you want to add more padding to cells use the CSS padding:15px; property (more space)
+  text-align:left; property to change the aligning of the text in the cells
+
+  Now lets say you want a cell to span over many columns, you would use the colspan atrribute added directly to the table cell. Ex.
+
+  <th colspan="2"> Name </th>
+
+  rowspan="2" is to make a cell span over many rows
+
+  Two type of lists in HTML - Ordered lists AND Unordered lists
+   Ordered lists - have numberical or alphabetical markers
+   Unordered lists - have bullet markers
+
+   The <ol> element is used for the ordered lists & inside this element the <li> tags (element) is wrapped inside which displays the list as numbers be defualt.
+   To change that use the style="list-style-type:upper-alpha" inside the <ol> tag to change to alphabetical order OR change upper-alpha to upper-roman to use roman numerals
+   the <ul> (unordered list) is built the same way but not uses bullet points
+   and you can use the style="list-style-type:" CSS property to change the bullet points to sqaures, nothing, etc.
+   
+   Two main display types in HTML - Blocks AND Inline
+   Block elements - start on a new line, and take up the full width available, they stretch to left and the right as far as they can examples are - <h1>, <p>, <table>, and <div> elements
+  
+    Inline elements - only take up as much space as neccessary. examples are - <a> (hyperlinks), <img>, <button>, and <span> elements.
+
+    ^^ These descriptions are describing how they are displayed on the web browser!
+    So we've learned that blocked elements up the full width available on the web browser, and includes a line break.
+    The <p> element is also a block element, and the <a> tag element (inline element) is inside the paragraph element and the result is there is no in line breaks for the <a>
+
+    Class attribute - in HTML you have to opportunity to group or clasify elements together (which is helpful if you want to apply the same action for all elements in a specific group) we use class attribute to group elements.
+
+    Ex. if i want two of the paragraphs below to have same background i add the class attribute with the value "my-group" now the two paragraphs belong to the same class.
+    Then you can use Internal CSS to select these elements with the class selector - the syntax for the class selector is a dot followed by the class name Ex.
+    <head>
+      <style>
+      .my-group{
+        background-colorL: red;
+      }
+      </style>
+    <head>
+    <h1>
+      <p>this is a paragraph</p>
+      <p class="my-group">this is a paragraph</p> 
+      <p class ="my-group">this is a paragraph</p>
+      <p>this is a paragraph</p>
+      <p>this is a paragraph</p>
+    </h1>
+    
+    BTW, different elements can share the same class
+    HTML elements can also belong to MORE THAN 1 class. Just make sure to seperate them with a space. Ex. class="my-group main" <- now this HTML element belongs to the .mygroup class, AND the .main class AND you'll get the CSS styles from BOTH the classes Example below in HTML syntax
+
+    ID attribute - this specifies a unique id for an HTML element 
+    The ID is a way to reach specific element in a page. and is very versitle (do many things well). It can be used as an identifier for HTML, CSS, and JavaScript.
+
+    In CSS - to select an element with a specified ID Ex.
+    <h1 id="myHeader">
+      you then have to write a hashtag character then the id of the element (using Internal CSS) Ex.
+      <style>
+        #myHeader {
+          background:color: lightblue;
+          color: black;
+          padding: 40px;
+          text-align; center;
+        }
+      </style>
+
+    In HTML - you can use ID as a bookmark
+    bookmarks - are used to allow users to jump to specific parts of a web page (very helpful if you have an extremely long html page) Ex.
+
+    <body>
+      <a href="C4"> Jump To Chapter </a>  (<- this creates a link that when clicked jumps to chapter 4)
+    <h2>chapter 1</h2>
+    <h2>chapter 2</h2>
+    <h2>chapter 3</h2>
+    <h2 id="#C4">chapter 4</h2>
+    <h2>chapter 5</h2>
+    <h2>chapter 6</h2>
+    <h2>chapter 7</h2>
+    </body>
+
+    In JavaScript - javascipt can access an element with a specified ID by using the getElementById() method Ex.
+
+    <h1 id="myHeader">Hello World! </h1>
+    <button onclick="displayResult()">Change Text</button>
+
+    <script>
+      function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+      }
+    </script>
+
+    1) ID attribute CAN be used on ANY HTML element
+    2) The ID value IS case sensitive
+    3) ID value must at least contain 1 character and must never contain white spaces
+    4) Each ID must be unique within a page, 2 elements CANNOT share the same ID
+
+    iframes - are used to display a webpage within a web page
+    Ex.
+    <iframe scr="demo_iframe.htm" height="" width=""></iframe> (the src specifies the URL or source of the inline frame page) height="" AND width="" attributes are used to specifiy the size of the iframe which the values can be numbers in px or percentages % OR you can use styl="" attribute width CSS height and width property values
+    By defualt the iframe has a border around it. TO REMOVE IT - add style="border:none" attribute, also with CSS you can change the size, color, and style of the border.
+    iframes can be used as the target frame for a link. 
+    Ex. So now when you click the link in the browser the website will apear in the iframe set
+
+    <body>
+      <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+
+      <p><a href="https://w3schools.com" target="iframe_a"> W3 schools</a></p>
+    </body>
+
+    JavaScript - has the ability to make HTML pages far more dynamic (something that is constantly changing, active, or full of energy and movement) AND interactive (something that involes two-way communication or active participation)
+
+    We will begin with the <script> tag - which is used to define a client-side script.
+      The script element either contains scripting statements OR it points to an external script file through the src attribute
+
+    Common uses of JavaScript - 1) dynamic changes of content
+    2) Image manipulation
+    3) Form Validation - checking if user input is correct and allowed before accepting it.
+    (Can be client-side or server side) These vvvv are all client-side
+    Ex. Required field left empty -> "This field is required" 
+        Wrong Email format -> "Please enter a valid email"
+        Passwords don't match -> "Passwords must match"
+        Age field contains letters -> "Please enter a number"
+    Server side form validation - Ex. checking if the username and password actually match what's in the data base
+
+    To select an HTML element JavaScript usually uses the document.getElementById() method
+      In this example the <p> element has an id attribute with the value "demo". The getElementById method finds the p element. Then we use the .innerHTML method to change the content of the p element to "Hello JavaScript!". vvv
+
+      <p id="demo"> This is a demonstration </p>
+        <script>
+          function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+          }
+        </script>
+
+        You can also CHANGE the STYLE of an HTML element like this vvv
+
+        <p id="demo"> Javascript can change the style of an HTML element</p>
+        <script>
+          document.getElementById("demo").style.fontSize = "25px";
+          document.getElementById("demo").style.color = "red";
+          document.getElementById("demo").style.backgroundColor = "yellow";
+        </script>
+
+        You can also CHANGE the HTML ATTRIBUTES like this vvv (this changes the src attribute)
+
+        <img id="myImage" src="img_girl.jpg" style="width:100%">
+        <script>
+          document.getElementById("myImage").src="GoodlookingNarrator.jpg";
+        </script>
+
+        Lets go back to HTML - Head element -
+        The head element is a container for metadata 
+
+        container - an element that holds other elements inside it to help organize, style, or group parts of a web page.
+
+        metadata - it describes or gives information about other data. Typically defines the document title, styles, scripts, character set (these are all elements btw) and other meta information.
+
+        (A lot of what goes on inside the head element is not directly shown on the page, just like the thoughts in your own head)
+
+        The Head element is placed between the <html> tag and the <body> tag
+
+        Ex. of character set this is typically after a script but inside of the <head>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="We buy and sell motors and cars">
+        <meta http-equiv="refresh" content="30">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0">
+
+        <title> Cars and Motors </title> - this title element is displayed in the browsers bar OR tab. It is also provided a title for the page when it is added to favorites. AND it displays a title for the page in SEARCH ENGINE RESULTS.
+
+        Other important information found inside of the <head> section are -
+          1)styles, or links to external stylesheets (these are elements of course)
+          2)important key words for search engines (using <meta> element)
+          3)character and coding information (also using <meta> element)
+          4) and other things that makes sure your page behaves as expected on different devices or screens (also using the <meta> element)
+
+        Forms - (You have been handed plenty of forms throughout your life examples - at doctors office, for school, for activites and sports. If you want to sign up or join something you must fill out a form )
+
+        In todays age these FORMS are usually on websites and built with HTML.
+        HTML Form - is used to collect user input -> then the user input is sent to a server for processing -> the HTML Form ELEMENT is used to creat a form
+        Form Element - is a container for different types of elements.
+        One of the most used element inside a form is a <input> element. An input element can be displayed in several different ways depending on its type="" attribute Ex.
+
+        <input type="text" <- text fields - defines a single line input field for text 
+        <input type="checkbox" <- checkboxes - this allows a user select many options (more than one answer)
+        <input type="radio" <- radiobuttons - this displays a radio button (typically used to select an answer/ lets a user select one option from a number of choices)
+        <input type="submit" <- submit buttons & etc. (there are many more input type you can use)
+
+        In addition to the <input> element there are several other elements we can use in forms
+        
+        1) The <select> element defines a drop-down list, it's a partially hidden list of options that you can choose from
+        2) The <textarea> text area element defines a multi-line input field wherre a user can input text with more than just a few words (like a Comment: field)
+        AND you can add a submit button <input type="submit"> <- this defines a submit button, that allows the user to submit the users comment
+
+        When submitting a form -> the user input is sent to a file on a server for processing.
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+   
+
+
+
+
+
+  --> 
 
   <!DOCTYPE html> <!--  <- I just added this idk if you need this or not (try deleting and see if everything still works. I think this is just standard to always have) -->
   <html>
@@ -40,8 +422,8 @@
   </head>
   <body>
 
-  <h1> My First Heading </h1>
-  <p> My First Paragraph </p>
+  <h1><mark><del style="border: 2px solid black;"> My First Heading </del></mark></h1>
+  <p><em><sub> My First Paragraph </sub></em></p>
   
   </body>
   </html>
@@ -52,9 +434,30 @@
   <html>
     <head>
       <title> My First Practice HTML page </title>
+      <style>
+      .my-group {
+        background-color: rgb(164, 153, 153);
+      }
+      .main {
+        font-size: 75px;
+      }
+    </style>
     </head>
-    <body>
-      <h1> My First Practice HTML page </h1>
-      <p> I am learning and understand how to write an HTML document. </p>
+    <body style="background-color: chocolate;">
+      <h1 class="my-group main" style="color: aqua;"> My First Practice HTML page </h1>
+      <h1 id="myHeader">Hello World! </h1>
+    <button onclick="displayResult()">Change Text</button>
+
+    <script>
+      function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+      }
+    </script>
+      <p id="myParagraph" class="my-group"><b> I am learning and understand how to write an HTML document. </b></p>
+      <script>
+        document.getElementById("myParagraph").style.color = "blue";
+        document.getElementById("myParagraph").style.fontSize = "100px";
+        document.getElementById("myParagraph").innerHTML = "Change the text!"
+      </script>
     </body>
   </html>
